@@ -1,0 +1,133 @@
+{
+  "name": "@retracedgmbh/node-oci-client",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "homepage": "http://retraced.co",
+  "repository": "retracedgmbh/node-oci-client",
+  "author": "Retraced GmbH",
+  "description": "Nodejs client for the OCI API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "xo && jest",
+    "lint": "xo",
+    "autofix": "xo --fix"
+  },
+  "engines": {
+    "node": "^12.8.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "printWidth": 120,
+    "useTabs": true
+  },
+  "xo": {
+    "prettier": true,
+    "globals": [
+      "it",
+      "describe",
+      "expect",
+      "fail",
+      "test"
+    ],
+    "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "vars": "all",
+          "args": "none",
+          "ignoreRestSiblings": false
+        }
+      ],
+      "ava/no-ignored-test-files": [
+        "off",
+        {
+          "files": [
+            "lib/**/*.test.js",
+            "utils/**/*.test.js"
+          ]
+        }
+      ],
+      "node/prefer-promises/fs": "off",
+      "complexity": "off"
+    }
+  },
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            }
+          ],
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES"
+            ]
+          }
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/github",
+        {
+          "successComment": false,
+          "releasedLabels": false
+        }
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/changelog",
+      "@semantic-release/git"
+    ],
+    "branch": "master"
+  },
+  "dependencies": {
+    "@retracedgmbh/schemas": "^1.12.0",
+    "ajv": "^6.10.2",
+    "axios": "^0.19.0",
+    "query-string": "^6.8.3"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.3.0",
+    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/npm": "^5.2.0",
+    "@semantic-release/release-notes-generator": "^7.3.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "nock": "^11.4.0",
+    "prettier": "^1.18.2",
+    "xo": "^0.25.3"
+  }
+}
