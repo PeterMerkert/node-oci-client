@@ -33,7 +33,7 @@ Using the `streamingClient` you can create / get or delete stream:
 
 ```javascript
 // Get stream
-stream = await streamingClient.get(streamId)
+stream = await streamingClient.getStream(streamId)
 
 // Delete a stream
 result =
