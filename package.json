@@ -9,6 +9,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "ava -v",
+    "test-ci": "nyc ava -v -c 2",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && CODECOV_TOKEN=$CODECOV_TOKEN_NODE_OCI_CLIENT codecov",
     "lint": "xo",
     "autofix": "xo --fix"
