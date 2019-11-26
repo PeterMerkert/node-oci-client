@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/retracedgmbh/node-oci-client/compare/v1.2.0...v1.2.1) (2019-11-26)
+
+
+### Bug Fixes
+
+* bug ([95f6ccc](https://github.com/retracedgmbh/node-oci-client/commit/95f6ccc5f1a4d89c7a3dcc5d8b112c2c20258dc6))
+
 # [1.2.0](https://github.com/retracedgmbh/node-oci-client/compare/v1.1.0...v1.2.0) (2019-11-26)
 
 
