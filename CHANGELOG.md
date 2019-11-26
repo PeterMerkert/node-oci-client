@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/retracedgmbh/node-oci-client/compare/v1.2.1...v1.3.0) (2019-11-26)
+
+
+### Features
+
+* Configure Renovate ([#1](https://github.com/retracedgmbh/node-oci-client/issues/1)) ([456dc82](https://github.com/retracedgmbh/node-oci-client/commit/456dc82973dfe19c0f7282842c0716fc9ec88b3b))
+
 ## [1.2.1](https://github.com/retracedgmbh/node-oci-client/compare/v1.2.0...v1.2.1) (2019-11-26)
 
 
