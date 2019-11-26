@@ -16,15 +16,14 @@ test.before(t => {
 
 test('POST /createPreauthenticatedRequest', async t => {
 	const namespaceName = process.env.ORACLE_OCI_NAMESPACE
-	const bucketName = 'api-testing-public'
-	const postBody = {
+	const bucketName = process.env.ORACLE_BUCKET_NAME_PUBLIC
+
+	const response = await objectStorageClient.createPreauthenticatedRequest(namespaceName, bucketName, {
 		name: 'testName',
 		objectName: 'testName.jpg',
 		accessType: 'ObjectReadWrite',
 		timeExpires: '2021-10-02T15:00:00Z'
-	}
-
-	const response = await objectStorageClient.createPreauthenticatedRequest(namespaceName, bucketName, postBody)
+	})
 
 	t.is(response.status, 200)
 	t.truthy(response.data.accessUri)
