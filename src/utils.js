@@ -1,40 +1,13 @@
 const crypto = require('crypto')
 
-module.exports.getHost = url => {
-	// For e.g. https://eu-frankfurt-1.streaming.oci.oraclecloud/20180418/streams/
-	const n1 = url.indexOf('//')
-	const n2 = url.indexOf('/', n1 + 2)
-
-	const start = n1 + 2
-	const length = n2 - start
-
-	// eslint-disable-next-line unicorn/prefer-string-slice
-	const host = url.substr(start, length)
-
-	return host
-}
-
-module.exports.getTarget = url => {
-	// For e.g. https://eu-frankfurt-1.streaming.oci.oraclecloud/20180418/streams/messages?cursor=&limit
-	const n1 = url.indexOf('//')
-	const n2 = url.indexOf('/', n1 + 2)
-
-	const start = n1 + 2
-	const length = n2 - start
-
-	// eslint-disable-next-line unicorn/prefer-string-slice
-	const target = url.substr(start + length)
-
-	return target
-}
-
 module.exports.prepareHeaders = (auth, url, method = 'GET', body = '') => {
 	const signAlgorithm = 'RSA-SHA256'
 	const sigVersion = '1'
 	const keyId = `${auth.tenancyId}/${auth.userId}/${auth.keyFingerprint}`
 	const now = new Date().toUTCString()
-	const host = exports.getHost(url)
-	const target = exports.getTarget(url)
+	const tobeSignedUrl = new URL(url)
+	const host = tobeSignedUrl.host
+	const target = `${tobeSignedUrl.pathname}${tobeSignedUrl.search}`
 
 	const headersObj = {}
 
