@@ -8,7 +8,7 @@
   "description": "Nodejs client for the OCI API",
   "main": "src/index.js",
   "scripts": {
-    "test": "ava -v",
+    "test": "env-cmd ava --verbose",
     "test-ci": "nyc ava -v -c 2",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && CODECOV_TOKEN=$CODECOV_TOKEN_NODE_OCI_CLIENT codecov",
     "lint": "xo",
@@ -155,6 +155,7 @@
     "husky": "^3.0.9",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
-    "xo": "^0.25.3"
+    "xo": "^0.25.3",
+    "env-cmd": "^10.0.1"
   }
 }
