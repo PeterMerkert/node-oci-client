@@ -34,7 +34,7 @@ class StreamingClient extends BaseClient {
 	}
 
 	deleteStream(streamId) {
-		return this.requestJSON(`${this.baseUrl}/streams/${streamId}`, 'DELETE', {})
+		return this.requestJSON(`${this.baseUrl}/streams/${streamId}`, 'DELETE', '')
 	}
 
 	getStream(streamId) {
@@ -105,11 +105,11 @@ class StreamingClient extends BaseClient {
 	}
 
 	consumerCommit(streamId, cursor) {
-		return this.requestJSON(`${this.baseUrl}/streams/${streamId}/commit?cursor=${cursor}`, 'POST', {})
+		return this.requestJSON(`${this.baseUrl}/streams/${streamId}/commit?cursor=${cursor}`, 'POST', '')
 	}
 
 	consumerHeartbeat(streamId, cursor) {
-		return this.requestJSON(`${this.baseUrl}/streams/${streamId}/heartbeat?cursor=${cursor}`, 'POST', {})
+		return this.requestJSON(`${this.baseUrl}/streams/${streamId}/heartbeat?cursor=${cursor}`, 'POST', '')
 	}
 }
 

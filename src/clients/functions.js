@@ -10,12 +10,10 @@ class FunctionsClient extends BaseClient {
 	}
 
 	invokeFunction(functionId, {fnIntent = null, fnInvokeType = null}) {
-		return this.requestJSON(
-			`${this.baseUrl}/functions/${functionId}/invoke`,
-			'POST',
-			{},
-			{'fn-intent': fnIntent, 'fn-invoke-type': fnInvokeType}
-		)
+		return this.requestJSON(`${this.baseUrl}/functions/${functionId}/invoke`, 'POST', '', {
+			'fn-intent': fnIntent,
+			'fn-invoke-type': fnInvokeType
+		})
 	}
 }
 

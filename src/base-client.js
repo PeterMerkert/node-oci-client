@@ -24,7 +24,7 @@ class BaseClient {
 			},
 			url,
 			method,
-			(body = '')
+			body
 		)
 
 		if (extraHeaders !== undefined) {

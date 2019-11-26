@@ -5,8 +5,7 @@ class ObjectStorageClient extends BaseClient {
 		super(args)
 
 		const endpoint = args.endpoint || 'https://objectstorage.eu-frankfurt-1.oraclecloud.com'
-		const apiVersion = args.apiVersion || ''
-		this.baseUrl = `${endpoint}/${apiVersion}`
+		this.baseUrl = `${endpoint}${args.apiVersion ? `/${args.apiVersion}` : ``}`
 	}
 
 	createPreauthenticatedRequest(namespaceName, bucketName, {name, objectName, accessType, timeExpires}) {
