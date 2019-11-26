@@ -27,7 +27,7 @@ const streamingClient = new StreamingClient({
 
 All functions return promises so you can chain them or just `await` them.
 
-### Users
+### StreamingClient
 
 Using the `streamingClient` you can create / get or delete stream:
 
