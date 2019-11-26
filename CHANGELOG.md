@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/retracedgmbh/node-oci-client/compare/v1.3.1...v1.4.0) (2019-11-26)
+
+
+### Features
+
+* Add object storage test ([#4](https://github.com/retracedgmbh/node-oci-client/issues/4)) ([1279c6c](https://github.com/retracedgmbh/node-oci-client/commit/1279c6cc17a309d930f5e3a7bbeed54571503fc9))
+
 ## [1.3.1](https://github.com/retracedgmbh/node-oci-client/compare/v1.3.0...v1.3.1) (2019-11-26)
 
 # [1.3.0](https://github.com/retracedgmbh/node-oci-client/compare/v1.2.1...v1.3.0) (2019-11-26)
