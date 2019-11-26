@@ -15,7 +15,7 @@ test.before(t => {
 })
 
 test('POST /createPreauthenticatedRequest', async t => {
-	const namespaceName = process.env.ORACLE_OCI_OBJECT_STORAGE_NAMESPACE
+	const namespaceName = process.env.ORACLE_OCI_NAMESPACE
 	const bucketName = 'api-testing-public'
 	const postBody = {
 		name: 'testName',
