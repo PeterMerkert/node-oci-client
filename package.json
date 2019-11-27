@@ -72,9 +72,6 @@
     "timezone": "Europe/London",
     "schedule": "before 6am",
     "automerge": true,
-    "major": {
-      "automerge": false
-    },
     "commitMessagePrefix": "chore: ",
     "commitMessageAction": "Upgrade",
     "commitMessageSuffix": " :rocket:",
