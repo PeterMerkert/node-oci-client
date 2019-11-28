@@ -146,7 +146,7 @@
     "@semantic-release/commit-analyzer": "6.3.3",
     "@semantic-release/git": "7.0.18",
     "@semantic-release/npm": "5.3.4",
-    "@semantic-release/release-notes-generator": "7.3.4",
+    "@semantic-release/release-notes-generator": "7.3.5",
     "ava": "2.4.0",
     "codecov": "3.6.1",
     "husky": "3.1.0",
