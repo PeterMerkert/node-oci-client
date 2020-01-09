@@ -149,7 +149,7 @@
     "@semantic-release/release-notes-generator": "7.3.5",
     "ava": "2.4.0",
     "codecov": "3.6.1",
-    "husky": "4.0.1",
+    "husky": "4.0.3",
     "nyc": "15.0.0",
     "prettier": "1.19.1",
     "xo": "0.25.3",
