@@ -1,5 +1,6 @@
-
 # Description
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fretracedgmbh%2Fnode-oci-client.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fretracedgmbh%2Fnode-oci-client?ref=badge_shield)
+
 
 Node.js client for the [OCI API](https://docs.cloud.oracle.com/iaas/api) service.
 
@@ -39,3 +40,6 @@ stream = await streamingClient.getStream(streamId)
 result =
   await streamingClient.deleteStream(streamId)
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fretracedgmbh%2Fnode-oci-client.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fretracedgmbh%2Fnode-oci-client?ref=badge_large)
