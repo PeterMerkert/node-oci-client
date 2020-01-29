@@ -6,7 +6,7 @@ module.exports.prepareHeaders = (auth, url, method = 'GET', body = '') => {
 	const keyId = `${auth.tenancyId}/${auth.userId}/${auth.keyFingerprint}`
 	const now = new Date().toUTCString()
 	const tobeSignedUrl = new URL(url)
-	const host = tobeSignedUrl.host
+	const {host} = tobeSignedUrl
 	const target = `${tobeSignedUrl.pathname}${tobeSignedUrl.search}`
 
 	const headersObj = {}
