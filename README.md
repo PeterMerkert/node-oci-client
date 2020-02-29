@@ -24,7 +24,7 @@ const streamingClient = new StreamingClient({
     tenancyId : "xxx.aaa.bbb", // Tenancy OCID
     userId : "user.123.456", // user OCID
     keyFingerprint : "a2:f4:45:ca:98",
-    privateKey : "content", // the text of the PEM key, NOT the name of the file
+    privateKey : "content", // base64 of the PEM file content, NOT the name of the file
     endpoint: "https://streaming.eu-frankfurt-1.oci.oraclecloud.com",
     apiVersion: "20180418"
 }) 
