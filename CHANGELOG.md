@@ -1,3 +1,5 @@
+## [1.4.59](https://github.com/retracedgmbh/node-oci-client/compare/v1.4.58...v1.4.59) (2020-04-13)
+
 ## [1.4.58](https://github.com/retracedgmbh/node-oci-client/compare/v1.4.57...v1.4.58) (2020-04-10)
 
 ## [1.4.57](https://github.com/retracedgmbh/node-oci-client/compare/v1.4.56...v1.4.57) (2020-04-09)
