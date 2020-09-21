@@ -27,7 +27,9 @@
     "singleQuote": true,
     "bracketSpacing": false,
     "printWidth": 120,
-    "useTabs": true
+    "useTabs": false,
+    "arrowParens": "avoid",
+    "trailingComma": "es5"
   },
   "xo": {
     "prettier": true,
@@ -39,6 +41,7 @@
       "test"
     ],
     "rules": {
+      "unicorn/prevent-abbreviations": "off",
       "no-unused-vars": [
         "error",
         {
